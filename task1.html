@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Task Management System</h1>
+       
+        <div class="add-task">
+            <h2>Add Task</h2>
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <select id="task-status">
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <input type="number" id="task-priority" placeholder="Priority (1-5)" min="1" max="5" required>
+            <button onclick="addTask()">Add Task</button>
+            
+        </div>
+     
+        <div class="filters">
+            <button onclick="filterTasks('Pending')">Show Pending</button>
+            <button onclick="filterTasks('Completed')">Show Completed</button>
+            <button onclick="clearFilters()">Clear Filters</button>
+            
+        </div>
+
+        <div class="task-list">
+            <h2>Task List</h2>
+            <ul id="task-list">
+            </ul>
+        </div>
+    </div>
+
+    <script src="task1.js"></script>
+</body>
+</html>
